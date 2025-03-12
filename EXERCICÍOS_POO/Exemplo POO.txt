@@ -1,0 +1,31 @@
+class Circulo():
+    def __init__(self, raio):
+        self.raio = raio
+        
+        
+    def calc_area(self):
+        resultado_area = 3 * (self.raio* self.raio)
+        return resultado_area
+        
+    def calc_perimetro(self):
+        resultado_perimetro = 3 * (2 * self.raio)
+        return resultado_perimetro    
+
+raio_fora = float(input("Digite o valor do raio: "))
+
+circulo1 = Circulo(raio_fora)
+
+print(circulo1.raio)
+
+resultado_area_fora = circulo1.calc_area()
+
+print(resultado_area_fora)
+
+resultado_perimetro_fora = circulo1.calc_perimetro()
+
+print(resultado_perimetro_fora)
+
+
+        
+
+
