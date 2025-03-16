@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Ecommerce</title>
+</head>
+<body>
+    <header>
+        <h1>DecoratioInc.</h1>
+        <hr>
+        <h3>Insira o produto</h3>
+        <form action="{% url 'produto' %}" method="POST"> {% csrf_token %}
+            <label for="">Nome:</label>
+            <input type="text" name='produto' class="form-control" placeholder="Digite o nome do produto">
+            <br>
+            <input type="image" name="image" class="image" >
+            <br>
+            <label for="">Preço</label>
+            <input type="number" name="valor" class="form-control" placeholder="Digite o valor">
+            <br>
+            <input type="submit" name="enviar">
+        </form>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+
+
+</body>
+</html>
