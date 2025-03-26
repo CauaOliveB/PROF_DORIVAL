@@ -1,0 +1,129 @@
+Scrum 
+
+	O que é?
+
+Framework ágil para gerenciamento de projetos complexos, focado em entregas incremaentais e adaptação contínua.
+
+
+
+	Origem
+
+ Baseado no empirismo (transparência, isnpeção e adaptação) e inspirado no The New Product Development Game ( Hirotaka Takeuchi e Ikujiro Nonaka, 1986 )
+
+
+
+Framework vs Metodologia
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	Pilares
+
+
+Trasparência : todos os aspectos do processo devem ser visíveis
+
+Inspeção : Verificação constante do progresso
+
+Adaptação : Ajustes contínuos para melhorar o produto e processo
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	Benefícios do Scrum
+
+		- Entrega rápida de valor
+
+		- Flexibilidade a mudanças
+
+		- Melhoria contínua
+
+		- Maior colaboração e satisfação da equipe
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Papéis no Scrum
+
+		Product Owner(PO)
+
+
+Responsabilidades:
+
+	-Definir e priorizar o Product Backlog
+	-Garantir que o produto gere valor máximo
+	-Rep
+resentar os stakehodler
+
+Habilidades: Visão de negócio, comunicação, tomada de decisão
+
+
+		Scrum Master(SM)
+
+Responsabilidades
+
+	-Remover impeidmentos
+	-Garantir que o time siga o SCRUM
+	-Facilitar eventor e melhorar processos
+
+Habilidades: Liderança servidora, resolução de conflitos, coaching
+
+
+		Time de Desenvolvimento(Dev Team)
+
+Responsabilidades :
+
+	-Entregar uncremetnos funcionais de cada Sprint
+	-Auto-organização e colaboração
+
+Habilidades: Técnicas, comunicação, trabalho em equipe
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	Eventos ( Cerimônias)
+
+		Sprint:Displinas a 4 semans(time-boxed)
+
+Objetivo: entregar um incremento no produto pronto
+
+		Planejamento do sprint (Sprint Planning)
+
+Duração : Máximo de 8h para uma Sprint de 4 semans.
+
+Partes:
+
+O que sera feiot? (PO explica itens do Backlog)
+Como será feito?
+
+
+	Daily Scrum (Stand-Up Meeting)
+Duração : 13 Minutos (Tieme-boxed)
+
+Perguntas-chaves
+
+O que fiz ontem?
+O que farei hoje?
+Há impedimentos?
+
+	Revisão do Sprint(Sprint Review)
+Duração: 4h para uma Sprint de 4 semanas
+
+Objetivo: Apresentar o incremente aos stakeholder e coletar feedbacks
+
+
+	Retrospectiva da Sprint ( Sprint Retrospective)
+		
+Duração: 3h para uma Sprint de 4 semanas
+
+Objetivo: Refletir sobre o processo e melhorar continuamente.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+	Product Backlog
+
+		O que é? 
+Lista priorizada de funcionalidades(itens)
+Responsável : Product Owner
+
+	Sprint Backlog
+	
+		O que é?
+
+Subconjunto do Product Backlog selecionado para cada Spirnt
+Responsável: Time de Desenvolvimento
