@@ -1,15 +1,23 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
-class Professor(models.Model):
+
+class Professor(AbstractUser):
     NI = models.PositiveIntegerField(primary_key=True)
-    nome = models.CharField(max_length=50)
-    email = models.EmailField()
     telefone = models.CharField(max_length=11)
     data_de_nascimento = models.DateField()
     data_de_contratacao = models.DateField()
+    CARGO_ESCOLHA = (
+        ('G', 'Gestor'),
+        ('P', 'Professor')
+    )
+    cargo = models.CharField(max_length=1, choices=CARGO_ESCOLHA)
+    
+    REQUIRED_FIELDS = ['NI', 'telefone', 'data_de_nascimento', 'data_de_contratacao','cargo']
 
     def __str__(self):
-        return self.nome
+        return self.username
+
 
 class Disciplina(models.Model):
     nome = models.CharField(max_length=50, primary_key=True)
@@ -48,3 +56,6 @@ class ReservaDeClasse(models.Model):
 
     def __str__(self):
         return f"{self.disciplina_associada} - {self.data_de_inicio} ({self.periodo})"
+    class Meta:
+        db_table = "app_reserva_de_classe"
+

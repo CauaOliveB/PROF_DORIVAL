@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'app',
     'rest_framework',
     'rest_framework_simplejwt',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -82,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'escola',
         'USER': 'root',
-        'PASSWORD': 'casa123',
+        'PASSWORD': 'senai',
         'HOST':'localhost',
         'PORT':'3306'
     }
@@ -140,3 +141,5 @@ SIMPLE_JWT = {
     "ACESS_TOKEN_LIFETIME": timedelta(hours=1),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1)
 }
+
+AUTH_USER_MODEL = 'app.Professor'

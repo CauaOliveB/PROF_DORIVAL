@@ -2,7 +2,7 @@ from rest_framework.generics import ListAPIView, ListCreateAPIView, RetrieveUpda
 from .serializers import ProfessorSerializer, DisciplinaSerializer, ReservaDeClasseSerializer
 from .models import Professor, Disciplina, ReservaDeClasse
 from rest_framework.permissions import IsAuthenticated
-from .permissions import IsManager
+from .permissions import IsManager, IsTeacher
 
  
 """""
@@ -31,6 +31,23 @@ class ProfessorRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     def get_permissions(self):
         return[IsManager()]
     
+class ReservasProfessorList(ListAPIView):
+    serializer_class = ReservaDeClasseSerializer
+    permission_classes = [IsAuthenticated, IsTeacher]
+    
+    def get_queryset(self):
+        reserva_sala = ReservaDeClasse.objects.filter(professor_responsavel=self.request.user)
+        return reserva_sala
+    
+class DisciplinasProfessorList(ListAPIView):
+    serializer_class = DisciplinaSerializer
+    permission_classes = [IsAuthenticated, IsTeacher]
+
+    def get_queryset(self):
+        return  Disciplina.objects.filter(professor_responsavel=self.request.user)
+
+
+    
 """""
 
 *--------------------------------*
@@ -48,7 +65,7 @@ class DisciplinaListCreateAPIView(ListCreateAPIView):
     def get_permissions(self):
         if self.request.method == 'GET':
             return [IsAuthenticated()]
-        return [IsManager]
+        return [IsManager()]
 
 class DisciplinaRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     queryset = Disciplina.objects.all()
@@ -75,7 +92,7 @@ class ReservaDeClasseListCreateAPIView(ListCreateAPIView):
     def get_permissions(self):
         if self.request.method == 'GET':
             return [IsAuthenticated()]
-        return [IsManager]
+        return [IsManager()]
 
 class ReservaDeClasseRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     queryset = ReservaDeClasse.objects.all()
@@ -83,4 +100,6 @@ class ReservaDeClasseRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     
     def get_permissions(self):
         return[IsManager()]
+    
+
     
