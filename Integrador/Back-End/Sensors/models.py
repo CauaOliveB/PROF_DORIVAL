@@ -2,10 +2,10 @@ from django.db import models
 
 class Sensors(models.Model): 
     sensors_choices = {
-        ('Temp','Temperature'),
-        ('Lumi','Luminosity'),
-        ('Humi','Humidity'),
-        ('Cont','Counter')
+        ('Temp','Temperature - °C'),
+        ('Lumi','Luminosity -lux'),
+        ('Humi','Humidity - %'),
+        ('Cont','Counter - num')
     }
 
     sensors = models.CharField(max_length=4, choices=sensors_choices)
@@ -14,16 +14,16 @@ class Sensors(models.Model):
     value = models.CharField(max_length=256)
     latitude = models.FloatField()
     longitude = models.CharField()
-    status_choices = {
-        ('ON','ON'),
-        ('OFF','OFF')
-    }
-    status = models.CharField(max_length=3, default='N/A', primary_key= True)  
+    status = models.BooleanField(default=False, primary_key= True)  
 
 class Ambience(models.Model):
-    sig = models.CharField(max)
+    sig = models.CharField(max_length=256)
+    description = models.CharField(max_length=256)
+    ni = models.CharField(max_length=256)
+    task = models.CharField(max_length=256)
 
 class Historic(models.Model):
     sensors = models.ForeignKey(Sensors, on_delete=models.CASCADE)
     ambiance = models.ForeignKey(Ambience, on_delete=models.CASCADE)
-    notes = models.TextField(max_length=450)
+    value = models.FloatField()
+    timestamp = models.IntegerField()  
