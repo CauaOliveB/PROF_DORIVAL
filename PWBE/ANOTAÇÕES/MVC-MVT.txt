@@ -1,0 +1,41 @@
+O que é MVC?
+
+É um padrão de desenvolvimento, que divide seu software em 3 partes:
+
+
+Model
+A camada Modelo é usada para com toda a lógica e dados que a pessoa usuária trabalha. Ela simplesmente representa os dados que estão sendo transferidos do controlador.
+
+View
+A camada utilizada para apresentar os dados na frente do usuário, conhecida como camada de visualização(Interface visual). O que os usuários conseguem ver é considerado como a camada View.
+
+Controller
+A camada Controller é o tomador de decisões, baseado no padrão de arquitetura MVC. Ele simplesmente faz uma ponte entre a camada View e a camada Model. 
+
+
+MVC (Model-View-Controller)
+
+Model: Cuida dos dados e das regras de negócio (ex.: banco de dados).
+
+View: Mostra as informações para o usuário (ex.: interface visual).
+
+Controller: Faz a ligação entre o Model e a View. Ele processa as entradas do usuário, aplica as regras de negócio e decide o que mostrar.
+
+
+
+MTV (Model-Template-View) do Django
+O Django usa um padrão parecido, mas com uma abordagem mais simples:
+
+Model: Igual ao MVC, cuida dos dados e regras de negócio.
+
+Template: Equivalente à View do MVC, mostra as informações para o usuário (ex.: HTML).
+
+View: Faz o papel do Controller do MVC, mas de forma mais simplificada. 
+
+No MVC, o Controller é essencial e separado.
+
+
+No MTV do Django, a View faz o papel do Controller, e você escreve menos código.
+Quem vem de outros frameworks está acostumado com o MVC e tenta aplicar a mesma lógica no Django, criando Controllers manualmente.
+
+No Django, a ideia é escrever menos código. Se você seguir os padrões do framework, a View já faz o trabalho do Controller, e você só precisa se preocupar com regras de negócio específicas.

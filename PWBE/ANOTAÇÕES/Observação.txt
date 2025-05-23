@@ -1,0 +1,10 @@
+SENAI - ROBERTO MANGE
+
+PWBE- Programação Back-End
+Profº Dorival
+
+O Insomnia e o Postman, se encontram em relação a proposta de testar API, os dois cumprem seu propósito e são muito bons.
+
+O Postman tem uma parte em enfase sobre a documentação da API e  também a função de testes, enquanto o Insomnia só faz testes da API.
+
+Usaria os dois, mas dependendo do projeto usaria mais um ou outro, como por exemplo, se precisa só testar a API usaira o Insomnia, caso precisa documentar e testar usaria o Postman

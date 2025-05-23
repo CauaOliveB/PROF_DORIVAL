@@ -1,0 +1,519 @@
+{
+	"info": {
+		"_postman_id": "b8f38fa1-7641-4866-9b90-e3858da79dd7",
+		"name": "CRUD_API_ESTUDANTES",
+		"description": "- **GET | POST | PUT | DELETE**",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41860353"
+	},
+	"item": [
+		{
+			"name": "listar_alunos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/alunos/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"alunos",
+						""
+					]
+				},
+				"description": "Mostra todos os alunos criados"
+			},
+			"response": [
+				{
+					"name": "listar",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/alunos/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"alunos",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 13 Mar 2025 19:06:19 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "193"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"nome\": \"Victor\",\n        \"idade\": 95,\n        \"curso\": \"Alimentos\",\n        \"instituicao\": \"Escola do Mecanico\",\n        \"rm\": 40029820\n    },\n    {\n        \"id\": 4,\n        \"nome\": \"Caua\",\n        \"idade\": 18,\n        \"curso\": \"Terapeuta\",\n        \"instituicao\": \"USF\",\n        \"rm\": 1234565\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "criar_aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \r\n        \"Caua\"\r\n    ,\r\n    \"idade\": \r\n        \"18\"\r\n    ,\r\n    \"curso\": \r\n        \"Terapeuta\"\r\n    ,\r\n    \"instituicao\": \r\n        \"USF\"\r\n    ,\r\n    \"rm\": \r\n        \"1234565\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/alunos/criar/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"alunos",
+						"criar",
+						""
+					]
+				},
+				"description": "Insere novos alunos no sistema"
+			},
+			"response": [
+				{
+					"name": "criar",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \r\n        \"Caua\"\r\n    ,\r\n    \"idade\": \r\n        \"18\"\r\n    ,\r\n    \"curso\": \r\n        \"Terapeuta\"\r\n    ,\r\n    \"instituicao\": \r\n        \"USF\"\r\n    ,\r\n    \"rm\": \r\n        \"1234565\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/alunos/criar/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"alunos",
+								"criar",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 13 Mar 2025 19:00:25 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, POST"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "86"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"nome\": \"Caua\",\n    \"idade\": 18,\n    \"curso\": \"Terapeuta\",\n    \"instituicao\": \"USF\",\n    \"rm\": 1234565\n}"
+				}
+			]
+		},
+		{
+			"name": "alterar_aluno",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \r\n        \"Caua\"\r\n    ,\r\n    \"idade\": \r\n        \"18\"\r\n    ,\r\n    \"curso\": \r\n        \"Neurologista\"\r\n    ,\r\n    \"instituicao\": \r\n        \"USP\"\r\n    ,\r\n    \"rm\": \r\n        \"400403090\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/aluno/alterar/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"aluno",
+						"alterar",
+						"4"
+					]
+				},
+				"description": "Altera os dados dos alunos inseridos nos sistemas"
+			},
+			"response": [
+				{
+					"name": "alterar",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \r\n        \"Caua\"\r\n    ,\r\n    \"idade\": \r\n        \"18\"\r\n    ,\r\n    \"curso\": \r\n        \"Neurologista\"\r\n    ,\r\n    \"instituicao\": \r\n        \"USP\"\r\n    ,\r\n    \"rm\": \r\n        \"400403090\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/aluno/alterar/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"aluno",
+								"alterar",
+								"4"
+							]
+						}
+					},
+					"status": "Reset Content",
+					"code": 205,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 13 Mar 2025 19:03:08 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, PUT"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "86"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"nome\": \"Caua\",\n    \"idade\": 18,\n    \"curso\": \"Terapeuta\",\n    \"instituicao\": \"USF\",\n    \"rm\": 1234565\n}"
+				}
+			]
+		},
+		{
+			"name": "deletar_aluno",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/aluno/deletar/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"aluno",
+						"deletar",
+						"2"
+					]
+				},
+				"description": "Deleta os alunos inserido no sistema"
+			},
+			"response": [
+				{
+					"name": "aluno",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/aluno/deletar/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"aluno",
+								"deletar",
+								"2"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 13 Mar 2025 18:44:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.1"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "DELETE, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "fazAlgo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/fazalgo/olads14",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"fazalgo",
+						"olads14"
+					]
+				},
+				"description": "Transforma o nosso texto em uma representação gráfica do texto usando símbolos | Exemplo fora da API"
+			},
+			"response": [
+				{
+					"name": "olads14",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/fazalgo/olads14",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"fazalgo",
+								"olads14"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 13 Mar 2025 18:25:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "224"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "\"       _           _     _ _  _   \\n  ___ | | __ _  __| |___/ | || |  \\n / _ \\\\| |/ _` |/ _` / __| | || |_ \\n| (_) | | (_| | (_| \\\\__ \\\\ |__   _|\\n \\\\___/|_|\\\\__,_|\\\\__,_|___/_|  |_|  \\n                                  \\n\""
+				}
+			]
+		}
+	]
+}
