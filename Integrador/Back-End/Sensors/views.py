@@ -3,4 +3,6 @@ from .models import Sensors,Ambience, Historic
 from rest_framework.generics import RetrieveUpdateDestroyAPIView
 
 class SensorsRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
-    queryset = sensors.get.all()
+    queryset =  Sensors.get.all()
+
+    
